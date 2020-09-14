@@ -10,7 +10,7 @@
       // const res = await fetch('jobs.json', {
       // const res = await fetch("https://sapper-tutorial.firebaseio.com/jobs.json", {
       // const res = await fetch("http://localhost:5000/jobs", {
-      const res = await fetch("https://job-ninja-expressjs.herokuapp.com", {
+      const res = await fetch("https://job-ninja-expressjs.herokuapp.com/jobs", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           // mode: 'no-cors',

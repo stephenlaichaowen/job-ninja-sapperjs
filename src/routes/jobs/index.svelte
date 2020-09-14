@@ -1,7 +1,7 @@
 <script context="module">
   export async function preload(page, session) {
     // const res = await this.fetch("http://localhost:5000/jobs")
-    const res = await this.fetch("https://job-ninja-expressjs.herokuapp.com")
+    const res = await this.fetch("https://job-ninja-expressjs.herokuapp.com/jobs")
     const jobs = await res.json();
     return { jobs };
 
