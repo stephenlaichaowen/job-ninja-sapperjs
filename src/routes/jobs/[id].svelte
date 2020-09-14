@@ -1,7 +1,8 @@
 <script context="module">
   export async function preload(page, session) {
     const { id } = page.params;
-    const res = await this.fetch(`http://localhost:5000/jobs/${id}`);
+    // const res = await this.fetch(`http://localhost:5000/jobs/${id}`);
+    const res = await this.fetch(`https://job-ninja-expressjs.herokuapp.com/${id}`);
     const job = await res.json();
     return { job };
 
@@ -29,7 +30,8 @@
   let btnText = "";
 
   const handleDelete = async id => {
-    const res = await fetch(`http://localhost:5000/jobs/${id}`, {
+    // const res = await fetch(`http://localhost:5000/jobs/${id}`, {
+    const res = await fetch(`https://job-ninja-expressjs.herokuapp.com/${id}`, {
       method: "DELETE"
     });
 
