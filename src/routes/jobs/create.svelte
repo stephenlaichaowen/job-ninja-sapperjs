@@ -7,13 +7,10 @@
 
   const handleSubmit = async () => {
     if (title && salary && details) {
-      // const res = await fetch('jobs.json', {
-      // const res = await fetch("https://sapper-tutorial.firebaseio.com/jobs.json", {
       // const res = await fetch("http://localhost:5000/jobs", {
       const res = await fetch("https://job-ninja-expressjs.herokuapp.com/jobs", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          // mode: 'no-cors',
           body: JSON.stringify({ title, salary, details })
         }
       );
@@ -58,12 +55,10 @@
     margin: 10px auto;
     border: none;
     border-bottom: 1px solid #eee;
-    /* border-radius: 8px; */
     outline: none;
   }
 
   .btn-group {
-    /* border: 1px solid white; */
     display: flex;
     justify-content: center;
     margin-top: 1rem;

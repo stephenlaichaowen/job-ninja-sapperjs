@@ -1,9 +1,3 @@
-<script>
-  import { writable } from 'svelte/store'
-
-  
-</script>
-
 <style>
   .container {
     text-align: center;

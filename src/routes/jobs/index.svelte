@@ -4,20 +4,10 @@
     const res = await this.fetch("https://job-ninja-expressjs.herokuapp.com/jobs")
     const jobs = await res.json();
     return { jobs };
-
-    /* firebase rest api */
-    // const res = await this.fetch("https://sapper-tutorial.firebaseio.com/jobs.json")
-    // const jobs = await res.json();
-    // const jobsArray = [];
-    // for (const key in jobs) {
-    //   jobsArray.push({ ...jobs[key], id: key });
-    // }
-    // return { jobsArray };
   }
 </script>
 
 <script>
-  // export let jobsArray;
   export let jobs;
 </script>
 
@@ -60,7 +50,6 @@
   <div class="container animate__animated animate__fadeIn">
     <h1>All Current Jobs</h1>
     <ul>
-      <!-- {#each jobsArray as item} -->
       {#each jobs as item}
         <li>
           <a rel="prefetch" href={`jobs/${item.id}`}>{item.title}</a>
